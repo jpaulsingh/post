@@ -1,4 +1,4 @@
-
+@import "bootstrap";
 $grayMediumLight: #eaeaea;
 
 /* universal */
@@ -80,6 +80,17 @@ aside {
   }
 }
 
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  height: auto;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
 .gravatar {
   float: left;
   margin-right: 10px;
@@ -102,6 +113,19 @@ aside {
     text-decoration: none;
   }
 }
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+ }
 
 .debug_dump {
   clear: both;
